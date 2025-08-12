@@ -51,6 +51,7 @@
             /* improves code readability, maintainability, and can potentially lead to better performance.*/
 
             Console.WriteLine("Het eerste nummer is {0} het tweede nummer.", comparison);
+            Console.WriteLine($"Het eerste nummer is {comparison} het tweede nummer.");
 
             Console.ReadKey();
 
