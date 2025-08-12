@@ -26,7 +26,7 @@
                 comparison = (eersteNr == tweedeNr) ? "gelijk aan" : "groter dan";
 
             }
-            Console.WriteLine("Het eerste nummer is {0} het tweede nummer.", comparison);
+            Console.WriteLine($"Het eerste nummer is {comparison} het tweede nummer.");
 
             Console.ReadKey();
 
@@ -86,7 +86,21 @@
                     break;
             }
 
-            Console.WriteLine("Het nummer is {0}.", nummer);
+            Console.WriteLine($"Het nummer is {nummer}.");
+            Console.ReadKey();
+            /* Exercise 4-5 -----------*/
+            //Het nummer is onbekend
+
+            /* Exercise 4-6--------*/
+
+            for (int i = 0; i <= 10; i++)
+
+            {
+                i++;//i wordt nog een keer verhoogd
+                // 1,3,5,7,9,11 worden geprint
+                Console.WriteLine($"Het nummer is {i}.");
+            }
+
             Console.ReadKey();
         }
     }
