@@ -92,6 +92,7 @@
             //Het nummer is onbekend
 
             /* Exercise 4-6--------*/
+
             for (int i = 0; i <= 10; i++)
 
             {
