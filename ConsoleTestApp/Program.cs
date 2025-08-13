@@ -23,7 +23,6 @@ namespace ConsoleTestApp
             //Console.ReadKey();
 
             ////chapter 6
-            Chapter6.Test();
             Chapter6.Exercise1();
             Chapter6.Exercise2(111, 9);
             Chapter6.Exercise3();

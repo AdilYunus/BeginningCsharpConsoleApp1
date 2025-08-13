@@ -5,17 +5,6 @@ namespace ConsoleTestApp;
 
 public class Chapter6
 {
-    public static void Test()
-    {
-        Write();
-        Console.ReadKey();
-    }
-
-    private static void Write()
-    {
-        Console.WriteLine("call de methode");
-    }
-
     public static void Exercise1()
     {
         {
