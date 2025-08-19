@@ -82,25 +82,23 @@ public class Chapter6
     {
         int[] waarden = new[] { 1, 3, 5, 6, 7 };
 
-        long resultaat = Optellen(waarden, 1, 3, 4);
+        long resultaat = Optellen(waarden);
 
         Console.WriteLine($"Het totaal is {resultaat}");
 
         Console.ReadKey();
     }
 
-    private static long Optellen(int[] lijst, params int[] position)
+    private static long Optellen(params int[] lijst)
     {
         long optelling = 0;
 
-
-        foreach (int i in position)
+        foreach (int waarde in lijst)
         {
-            optelling += lijst[i];
+            optelling += waarde; ;
         }
 
         return optelling;
-        // 3+6+7 =16
     }
 
     public static void Exercise5()

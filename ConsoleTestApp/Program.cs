@@ -23,18 +23,19 @@ namespace ConsoleTestApp
             //Console.ReadKey();
 
             ////chapter 6
-            Chapter6.Exercise1();
-            Chapter6.Exercise2(111, 9);
-            Chapter6.Exercise3();
-            Chapter6.Exercise4();
-            Chapter6.Exercise5();
-            Chapter6.Exercise6();
-            Chapter6.Exercise7();
-            Chapter6.Exercise8();
-            Chapter6.Exercise9();
+            //Chapter6.Exercise1();
+            //Chapter6.Exercise2(111, 9);
+            //Chapter6.Exercise3();
+            //Chapter6.Exercise4();
+            //Chapter6.Exercise5();
+            //Chapter6.Exercise6();
+            //Chapter6.Exercise7();
+            //Chapter6.Exercise8();
+            //Chapter6.Exercise9();
+            //Console.ReadKey();
 
-
-            Console.ReadKey();
+            ////chapter 7
+            Chapter7.Exercise1();
 
         }
     }
