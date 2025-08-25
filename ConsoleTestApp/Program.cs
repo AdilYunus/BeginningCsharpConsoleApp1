@@ -35,7 +35,32 @@ namespace ConsoleTestApp
             //Console.ReadKey();
 
             ////chapter 7
-            Chapter7.Exercise1();
+            //Chapter7.Exercise1();
+
+
+            //Chapter 8
+            Chapter8.Exercise1();
+            Chapter8.Exercise2();
+            Chapter8.Exercise3();
+
+            // Exercise 4
+            //PersoonBase kan abstract zijn. Vrijwilliger en Werknemer kunnen Sealed zijn
+
+            Chapter8.Exercise5();
+            Chapter8.Exercise6();
+            Chapter8.Exercise7();
+
+            //Exercise 8
+            //Alle drie klassen kunnen worden geïnstantieerd
+
+            // Exercise 9
+            // persoonbase is abstract en kan dus niet geïnstantieerd worden,maar werknemer wel
+
+            // Exercise 10
+            // Omdat Deel() static is en dus geen toegang heeft tot de instance-velden _teller en _noemer.
+
+            // Exercise 11
+            // de constructor met de meeste parameters,De andere constructors roepen deze aan met : this() om code-duplicatie te vermijden.
 
         }
     }
