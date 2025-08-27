@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Channels;
 using ConsoleTestApp;
 namespace ConsoleTestApp
 {
@@ -39,16 +41,16 @@ namespace ConsoleTestApp
 
 
             //Chapter 8
-            Chapter8.Exercise1();
-            Chapter8.Exercise2();
-            Chapter8.Exercise3();
+            //Chapter8.Exercise1();
+            //Chapter8.Exercise2();
+            //Chapter8.Exercise3();
 
             // Exercise 4
             //PersoonBase kan abstract zijn. Vrijwilliger en Werknemer kunnen Sealed zijn
 
-            Chapter8.Exercise5();
-            Chapter8.Exercise6();
-            Chapter8.Exercise7();
+            //Chapter8.Exercise5();
+            //Chapter8.Exercise6();
+            //Chapter8.Exercise7();
 
             //Exercise 8
             //Alle drie klassen kunnen worden geïnstantieerd
@@ -62,6 +64,10 @@ namespace ConsoleTestApp
             // Exercise 11
             // de constructor met de meeste parameters,De andere constructors roepen deze aan met : this() om code-duplicatie te vermijden.
 
+            //Chapter 9
+            //Chapter9.Test();
+
+            Chapter9.Exercise1();
         }
     }
 }
