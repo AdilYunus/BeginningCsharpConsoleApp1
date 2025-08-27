@@ -58,9 +58,37 @@ namespace ConsoleTestApp
         {
             Relatie relatie = new Relatie(194602874, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Bakker", 1234, 7029);
 
+            // Exercise 1
             Console.WriteLine("Naam van de relatie: {0}", relatie.VolledigeNaam);
+            //Exercise 4
+            Console.WriteLine("Naam van de relatie {0}, {1}", relatie.VolledigeNaam, relatie.ToString());
+
             Console.ReadKey();
+
         }
-    
+
+        public static void Exercise4()
+        {
+            Relatie relatie = new Relatie(194602874, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Bakker", 1234, 7029);
+
+           
+            //Exercise 4
+            Console.WriteLine("Naam van de relatie {0}, {1}", relatie.VolledigeNaam, relatie.ToString());
+
+            Console.ReadKey();
+
+        }
+
+        public static void Exercise5()
+        {
+            Relatie relatie = new Relatie(194602874, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Bakker", 1234, 7029);
+            //Exercise 5
+            Console.WriteLine(relatie.ToString());
+
+            Console.ReadKey();
+
+        }
+
+
     }
 }

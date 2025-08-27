@@ -21,6 +21,5 @@ namespace ConsoleTestApp
         string Geslachtsnaam { get; }
         int Nummer { get; }
         int Uzovicode { get; }
-        string VolledigeNaam { get; }
     }
 }

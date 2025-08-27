@@ -67,7 +67,19 @@ namespace ConsoleTestApp
             //Chapter 9
             //Chapter9.Test();
 
-            Chapter9.Exercise1();
+            //Chapter9.Exercise1();
+            // Exercise 2 
+            // new Relatie(7 argument)
+            // Relatie(7 args ) : base()
+            // RelatieBase(7 args)
+            // Relatie(7args) : base
+
+            // Exercise 3 
+            // kijk naar RelatieBase
+
+            // Exercise 4
+            Chapter9.Exercise4();
+            Chapter9.Exercise5();// ToString() in Relatie was called
         }
     }
 }
