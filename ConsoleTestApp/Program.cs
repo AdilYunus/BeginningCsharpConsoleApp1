@@ -80,11 +80,12 @@ namespace ConsoleTestApp
             //// Exercise 4
             //Chapter9.Exercise4();
             ////Exercose 5
-            Chapter9.Exercise5();// ToString() in Relatie was called
+            //Chapter9.Exercise5();// ToString() in Relatie was called
 
             /* Chapter 10*/
             //Chapter10.Test();
-            Chapter10.Exercise1();
+            //Chapter10.Exercise1();
+            Chapter10.Exercise2();
         }
     }
 }
