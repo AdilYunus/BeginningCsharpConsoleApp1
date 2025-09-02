@@ -85,7 +85,8 @@ namespace ConsoleTestApp
             /* Chapter 10*/
             //Chapter10.Test();
             //Chapter10.Exercise1();
-            Chapter10.Exercise2();
+            //Chapter10.Exercise2();
+            Chapter10.Exercise3();
         }
     }
 }

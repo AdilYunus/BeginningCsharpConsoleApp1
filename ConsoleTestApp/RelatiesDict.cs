@@ -30,5 +30,13 @@ namespace ConsoleTestApp
                 Dictionary[nummer] = value;
             }
         }
+        public new IEnumerator GetEnumerator()
+        {
+           foreach (object relatie in Dictionary.Values)
+           {
+                yield return (Relatie)relatie;
+           }
+        }
     }
+
 }

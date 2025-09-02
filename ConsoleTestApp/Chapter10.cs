@@ -171,14 +171,34 @@ namespace ConsoleTestApp
                 Console.WriteLine("Naam van de relatie is {0}", naam.VolledigeNaam);
             }
 
-            Console.WriteLine("Aantal elementen in de Dictionary = {0}", relatiesDict.Count);
+            Console.WriteLine($"Aantal elementen in de Dictionary = {relatiesDict.Count}");
 
             relatiesDict.Remove(relatie2.Nummer);
 
-            Console.WriteLine("Aantal elementen in de Dictionary = {0}", relatiesDict.Count);
+            Console.WriteLine($"Aantal elementen in de Dictionary = {relatiesDict.Count}" );
 
             Console.ReadKey();
 
+        }
+
+        public static void Exercise3()
+        {
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker", 123, 7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma", 456, 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma", 789, 7029);
+
+            RelatiesDict relatiesDict = new RelatiesDict();
+            relatiesDict.Add(relatie1.Nummer, relatie1);
+            relatiesDict.Add(relatie2.Nummer, relatie2);
+            relatiesDict.Add(relatie3.Nummer, relatie3);
+
+
+
+            foreach (Relatie relatie in relatiesDict)
+            {
+                Console.WriteLine($"Naam van de relatie is {relatie.VolledigeNaam}");
+            }
+            Console.ReadKey();
         }
     }
 
