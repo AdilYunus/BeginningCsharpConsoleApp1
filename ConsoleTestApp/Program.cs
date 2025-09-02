@@ -77,9 +77,14 @@ namespace ConsoleTestApp
             // Exercise 3 
             // kijk naar RelatieBase
 
-            // Exercise 4
-            Chapter9.Exercise4();
+            //// Exercise 4
+            //Chapter9.Exercise4();
+            ////Exercose 5
             Chapter9.Exercise5();// ToString() in Relatie was called
+
+            /* Chapter 10*/
+            //Chapter10.Test();
+            Chapter10.Exercise1();
         }
     }
 }
