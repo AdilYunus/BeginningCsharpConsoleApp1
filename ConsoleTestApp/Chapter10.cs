@@ -201,6 +201,22 @@ namespace ConsoleTestApp
             Console.ReadKey();
         }
 
+        public static void Exercise5()
+        {
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1999, 9, 3), GeslachtType.Man, "John", "Bakker", 123, 7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(2000, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma", 456, 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma", 789, 7029);
+
+            Relatie[] relaties = { relatie1, relatie2, relatie3 };
+            Array.Sort(relaties);
+
+            foreach (var relatie in relaties)
+            {
+                Console.WriteLine($"{relatie.VolledigeNaam}  {relatie.Geboortedatum:yyyy-MM-dd}");
+            }
+            Console.ReadKey();
+        }
+
     }
 
 }
