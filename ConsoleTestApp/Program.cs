@@ -86,7 +86,11 @@ namespace ConsoleTestApp
             //Chapter10.Test();
             //Chapter10.Exercise1();
             //Chapter10.Exercise2();
-            Chapter10.Exercise3();
+            //Chapter10.Exercise3();
+            //Exercise 4
+            // De is-operator controleert of een object van een bepaald type is of naar dat type kan worden geconverteerd
+            // De as-operator probeert een object naar een bepaald type te converteren. Als de conversie succesvol is, retourneert het het geconverteerde object.Als de conversie mislukt, retourneert "null"
+            //
         }
     }
 }
