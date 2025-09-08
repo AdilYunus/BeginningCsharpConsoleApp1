@@ -148,10 +148,13 @@ namespace ConsoleTestApp
 
             int[] relatieNummers = new int[] { 123, 456, 789 };
 
-            Relatie relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker", relatieNummers[0], 7029);
-            Relatie relatie2 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma", relatieNummers[1], 7037);
-            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma", relatieNummers[2], 7029);
-            
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker",
+                relatieNummers[0], 7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique",
+                "Boomsma", relatieNummers[1], 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal",
+                "Mijndertsma", relatieNummers[2], 7029);
+
             Console.WriteLine("Gebruik in de Relaties collection");
 
             RelatiesDict relatiesDict = new RelatiesDict();
@@ -166,8 +169,8 @@ namespace ConsoleTestApp
             //}
             for (int i = 0; i <= relatieNummers.GetUpperBound(0); i++)
             {
-                int nummer = relatieNummers[i];  
-                Relatie naam = relatiesDict[nummer]; 
+                int nummer = relatieNummers[i];
+                Relatie naam = relatiesDict[nummer];
                 Console.WriteLine("Naam van de relatie is {0}", naam.VolledigeNaam);
             }
 
@@ -175,7 +178,7 @@ namespace ConsoleTestApp
 
             relatiesDict.Remove(relatie2.Nummer);
 
-            Console.WriteLine($"Aantal elementen in de Dictionary = {relatiesDict.Count}" );
+            Console.WriteLine($"Aantal elementen in de Dictionary = {relatiesDict.Count}");
 
             Console.ReadKey();
 
@@ -183,9 +186,12 @@ namespace ConsoleTestApp
 
         public static void Exercise3()
         {
-            Relatie relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker", 123, 7029);
-            Relatie relatie2 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma", 456, 7037);
-            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma", 789, 7029);
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker", 123,
+                7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique",
+                "Boomsma", 456, 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal",
+                "Mijndertsma", 789, 7029);
 
             RelatiesDict relatiesDict = new RelatiesDict();
             relatiesDict.Add(relatie1.Nummer, relatie1);
@@ -198,25 +204,103 @@ namespace ConsoleTestApp
             {
                 Console.WriteLine($"Naam van de relatie is {relatie.VolledigeNaam}");
             }
+
             Console.ReadKey();
         }
 
         public static void Exercise5()
         {
-            Relatie relatie1 = new Relatie(194602874, new DateTime(1999, 9, 3), GeslachtType.Man, "John", "Bakker", 123, 7029);
-            Relatie relatie2 = new Relatie(476970854, new DateTime(2000, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma", 456, 7037);
-            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma", 789, 7029);
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1999, 9, 3), GeslachtType.Man, "John", "Bakker", 123,
+                7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(2000, 8, 11), GeslachtType.Vrouw, "Monique",
+                "Boomsma", 456, 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal",
+                "Mijndertsma", 789, 7029);
 
             Relatie[] relaties = { relatie1, relatie2, relatie3 };
+
             Array.Sort(relaties);
 
             foreach (var relatie in relaties)
             {
                 Console.WriteLine($"{relatie.VolledigeNaam}  {relatie.Geboortedatum:yyyy-MM-dd}");
             }
+
+            Console.ReadKey();
+        }
+
+        public static void Exercise6()
+        {
+            ArrayList relaties = new ArrayList()
+
+            {
+                new Relatie(0, new DateTime(1970, 3, 9), GeslachtType.Man, "Johan", "Bakker"),
+                new Relatie(0, new DateTime(1989, 11, 2), GeslachtType.Vrouw, "Monique", "Slachter"),
+                new Relatie(0, new DateTime(1956, 8, 22), GeslachtType.Vrouw, "Suzan", "Klaver"),
+                new Relatie(0, new DateTime(1977, 2, 17), GeslachtType.Man, "Klaas", "Groot"),
+                new Relatie(0, new DateTime(1988, 10, 14), GeslachtType.Vrouw, "Esther", "Kemps"),
+            };
+
+            Console.WriteLine("Ongesorteerde lijst:");
+
+            foreach (Relatie relatie in relaties)
+            {
+                Console.WriteLine("{0,-20} geboortedatum {1:dd-MM-yyyy}", relatie.VolledigeNaam, relatie.Geboortedatum);
+            }
+
+            Console.WriteLine("");
+            relaties.Sort();
+
+            Console.WriteLine("Gesorteerde lijst:");
+
+            foreach (Relatie relatie in relaties)
+            {
+                Console.WriteLine("{0,-20} geboortedatum {1:dd-MM-yyyy}", relatie.VolledigeNaam, relatie.Geboortedatum);
+            }
+            Console.ReadKey();
+        }
+
+        public static void Exercise7()
+        {
+
+            Relatie relatie1 = new Relatie(194602874, new DateTime(2000, 1, 1), GeslachtType.Man, "John", "Bakker", 123,
+                7029);
+            Relatie relatie2 = new Relatie(476970854, new DateTime(2000, 1, 2), GeslachtType.Vrouw, "Monique",
+                "Boomsma", 456, 7037);
+            Relatie relatie3 = new Relatie(420645858, new DateTime(1999, 12, 31), GeslachtType.Vrouw, "Chantal",
+                "Mijndertsma", 789, 7029);
+
+            RelatieCollection relaties = new RelatieCollection();
+            relaties.Add(relatie1);
+            relaties.Add(relatie2);
+            relaties.Add(relatie3);
+
+            Relatie jongst = relaties.GetJongst();
+            Relatie oudest = relaties.GetOudest();
+
+            Console.WriteLine($"De jongste relatie is {jongst.VolledigeNaam}, geboren op {jongst.Geboortedatum:dd-MM-yyyy}");
+            Console.WriteLine($"De oudste relatie is {oudest.VolledigeNaam}, geboren op {oudest.Geboortedatum:dd-MM-yyyy}");
+            Console.ReadKey();
+        }
+
+        public static void Exercise8()
+        {
+            Relatie relatie1 = new Relatie(194602874, new DateTime(1990, 5, 1), GeslachtType.Man, "Jan", "Bakker", 123, 7029);
+            Relatie relatie2 = new Relatie(194602874, new DateTime(1991, 5, 1), GeslachtType.Man, "Jan", "Bakker", 123, 7029);
+            Relatie relatie3 = new Relatie(123456789, new DateTime(1995, 8, 20), GeslachtType.Vrouw, "Monique", "Boomsma", 456, 7037);
+            Relatie relatie4 = relatie1;
+            Console.WriteLine("\nTest van referentie-gelijkheid (ReferenceEquals):");
+            Console.WriteLine($"Relatie1 is gelijk aan Relatie2 : {Object.ReferenceEquals(relatie1, relatie2)}"); // false
+            Console.WriteLine($"Relatie1 is gelijk aan Relatie3 : {Object.ReferenceEquals(relatie1, relatie3)}"); // false
+            Console.WriteLine($"Relatie1 is gelijk aan Relatie4 : {Object.ReferenceEquals(relatie1, relatie4)}");//true
+
+            Console.WriteLine("Test van waarde-gelijkheid (Equals):");
+            Console.WriteLine("relatie1.Equals(relatie2) = {0}", relatie1.Equals(relatie2)); // True
+            Console.WriteLine("relatie1.Equals(relatie3) = {0}", relatie1.Equals(relatie3)); // False
+            Console.WriteLine("relatie1.Equals(relatie4) = {0}", relatie1.Equals(relatie4));//True
+
             Console.ReadKey();
         }
 
     }
-
 }

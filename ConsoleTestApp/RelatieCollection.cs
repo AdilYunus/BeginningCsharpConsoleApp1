@@ -31,5 +31,29 @@ namespace ConsoleTestApp
                 List[index] = value;
             }
         }
+        public Relatie GetJongst()
+        {
+            Relatie jongst = null;
+            foreach (Relatie r in this)
+            {
+                if (jongst == null || r.Geboortedatum > jongst.Geboortedatum)
+                {
+                    jongst = r;
+                }
+            }
+            return jongst;
+        }
+        public Relatie GetOudest()
+        {
+            Relatie oudst = null;
+            foreach (Relatie r in this)
+            {
+                if (oudst == null || r.Geboortedatum < oudst.Geboortedatum)
+                {
+                    oudst = r;
+                }
+            }
+            return oudst;
+        }
     }
 }

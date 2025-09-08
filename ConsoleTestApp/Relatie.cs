@@ -35,8 +35,39 @@ namespace ConsoleTestApp
             {
                 return -1;
             }
-            return this.Geboortedatum.CompareTo(r.Geboortedatum);
+            //asc voor exercise 10-5
+            //return Geboortedatum.CompareTo(r.Geboortedatum);
+
+            //desc voor erercise 10-6
+            return -Geboortedatum.CompareTo(r.Geboortedatum);
         }
-    
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Relatie other = obj as Relatie;
+            if (other == null)
+            {
+                return false;
+            }
+            //return this.Burgerservicenummer.Equals(other.Burgerservicenummer);
+            return Equals(other);
+            //return false;
+
+        }
+        public bool Equals(Relatie other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+            return this.Burgerservicenummer.Equals(other.Burgerservicenummer);
+
+        }
+
     }
 }
