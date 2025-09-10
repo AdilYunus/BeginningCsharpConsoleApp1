@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestApp
 {
-    public class Relatie : RelatieBase, IComparable
+    public class Relatie : RelatieBase, IComparable, IComparable<Relatie>
     {
         public string VolledigeNaam => $"{Voornaam} {Geslachtsnaam}";
 
@@ -40,6 +40,14 @@ namespace ConsoleTestApp
 
             //desc voor erercise 10-6
             return -Geboortedatum.CompareTo(r.Geboortedatum);
+        }
+
+        //exercise 11-5
+        public int CompareTo(Relatie other)
+        {
+            if (other == null) return 1;
+            return this.Geboortedatum.CompareTo(other.Geboortedatum);
+
         }
 
         public override bool Equals(object obj)
