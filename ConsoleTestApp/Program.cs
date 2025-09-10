@@ -94,7 +94,16 @@ namespace ConsoleTestApp
             //Chapter10.Exercise5();
             //Chapter10.Exercise6();
             //Chapter10.Exercise7();
-            Chapter10.Exercise8();
+            //Chapter10.Exercise8();
+
+            /* Chapter 11 */
+            //Chapter11.Exercise1();
+            //Chapter11.Exercise2();
+            //Chapter11.Exercise3();
+            //exercise 4 kijk naar de code in Chapter11.Exercise3();
+            //Chapter11.Exercise5();
+            //Chapter11.Exercise6();
+            Chapter11.Exercise7();
 
         }
     }
