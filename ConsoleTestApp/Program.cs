@@ -103,7 +103,23 @@ namespace ConsoleTestApp
             //exercise 4 kijk naar de code in Chapter11.Exercise3();
             //Chapter11.Exercise5();
             //Chapter11.Exercise6();
-            Chapter11.Exercise7();
+            //Chapter11.Exercise7();
+
+            /* Chapter 12 */
+            //Exercise 12-1
+            // er is geen parameterloze constructor.
+            //
+            // een default constructor toevoegen om object initializer te gebruiken.
+            //Exercise 12-2
+            //Chapter12.Exercise2();
+            //Chapter12.Exercise3();
+            //Chapter12.Exercise4();
+            //Chapter12.Exercise5();
+            //Chapter12.Exercise6();
+            //Chapter12.Exercise7();
+            Chapter12.Exercise8_9();
+
+
 
         }
     }
