@@ -117,7 +117,17 @@ namespace ConsoleTestApp
             //Chapter12.Exercise5();
             //Chapter12.Exercise6();
             //Chapter12.Exercise7();
-            Chapter12.Exercise8_9();
+            //Chapter12.Exercise8_9();
+
+            //Chapter 13
+            //Chapter13.Exercise1();
+            //de eventhandler wordt twee keer uitgevoerd.
+
+            //Chapter13.Exercise2();
+            //Na het afmelden van de eventhandler wordt het event niet meer uitgevoerd.
+
+            Chapter13.Exercise3();
+            Chapter13.Exercise4();
 
 
 
