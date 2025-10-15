@@ -21,7 +21,6 @@ namespace ConsoleTestApp
             relaties.Changed += new ChangedEventHandler(RelatiesChanged);
             relaties.Changed += new ChangedEventHandler(RelatiesChanged);
 
-
             relaties.Add(relatie1);   
             relaties.Add(relatie2);   
             relaties.Remove(relatie1);
@@ -61,12 +60,8 @@ namespace ConsoleTestApp
             var relatie2 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma");
             var relatie3 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma");
 
-         
-
             var relaties = new RelatieCollectionEvent<Relatie>();
-
-
-
+            
             relaties.EvenCount +=new CountEventHandler(RelatiesEvenCount);
             relaties.OddCount += new CountEventHandler(RelatiesOddCount);
 
@@ -85,7 +80,6 @@ namespace ConsoleTestApp
 
             Console.ReadKey();
         }
-
         private static void RelatiesEvenCount(object sender, int count)
         {
             Console.WriteLine($"er is even aantal relaties：{count}");
@@ -96,8 +90,43 @@ namespace ConsoleTestApp
             Console.WriteLine($"er is oneven aantal relaties：{count}");
         }
 
-    }
+        public static void Exercise4()
+        {
+            var relatie1 = new Relatie(194602874, new DateTime(1975, 9, 3), GeslachtType.Man, "John", "Bakker");
+            var relatie2 = new Relatie(420645858, new DateTime(1991, 2, 27), GeslachtType.Vrouw, "Chantal", "Mijndertsma");
+            var relatie3 = new Relatie(476970854, new DateTime(1985, 8, 11), GeslachtType.Vrouw, "Monique", "Boomsma");
 
+            var relaties = new RelatieCollectionEvent1<Relatie>();
+
+            relaties.Changed += new EventHandler<ChangedEventArgs>(RelatiesChanged);
+            relaties.CountChanged += new EventHandler<CountEventArgs>(RelatiesAantal);
+
+            relaties.Add(relatie1);
+            relaties.Add(relatie2);
+            relaties.Remove(relatie2);
+            relaties.Add(relatie2);
+            relaties.Add(relatie3);
+            relaties.Remove(relatie3);
+        }
+        
+        private static void RelatiesChanged(object sender, EventArgs e)
+        {
+            var args = e as ChangedEventArgs;
+            if (args != null)
+            {
+                Console.WriteLine($"Wijziging : {args.Verbijzondering}" );
+            }
+        }
+
+        private static void RelatiesAantal(object sender, EventArgs e)
+        {
+            var args = e as CountEventArgs;
+            if (args != null)
+            {
+                Console.WriteLine($"huidige aantal relaties {args.Count} en het is een  {(args.IsEven ? "even" : "oneven")}.");
+            }
+        }
+    }
 }
 
 
