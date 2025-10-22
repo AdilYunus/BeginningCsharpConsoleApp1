@@ -126,8 +126,14 @@ namespace ConsoleTestApp
             //Chapter13.Exercise2();
             //Na het afmelden van de eventhandler wordt het event niet meer uitgevoerd.
 
-            Chapter13.Exercise3();
-            Chapter13.Exercise4();
+            //Chapter13.Exercise3();
+            //Chapter13.Exercise4();
+            // Chapter 14
+            //Chapter14.Exercise1();
+            Chapter14.Exercise2();
+
+        
+
 
 
 
